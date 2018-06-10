@@ -1,0 +1,9 @@
+FLASK_ENV=development
+
+DATABASE_URI=<your development database here>
+
+PROD_DATABASE_URI=<your production database here>
+
+DEBUG=True
+
+SECRET_KEY=<your secret key here>
