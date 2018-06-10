@@ -1,0 +1,10 @@
+venv/
+idea/
+.idea
+.env
+.DS_Store
+.__pycache__/
+__pycache__/
+tests/__pycache__/
+.pytest_cache/
+dev_data.db
