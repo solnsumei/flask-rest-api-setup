@@ -8,7 +8,7 @@ user_schema = UserSchema()
 
 class Register(Resource):
     @staticmethod
-    @UserSchema.validate_fields(locations=('json',))
+    @UserSchema.validate_fields(location=('json',))
     def post(args):
 
         if not safe_str_cmp(args['password'], args['password_confirmation']):
