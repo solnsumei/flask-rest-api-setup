@@ -1,5 +1,5 @@
 from flask_restful import Resource
-from werkzeug.security import safe_str_cmp
+from hmac import compare_digest
 from src.models.user import UserModel
 from src.models.schemas.user import UserSchema, user_summary
 
@@ -11,7 +11,7 @@ class Register(Resource):
     @UserSchema.validate_fields(location=('json',))
     def post(args):
 
-        if not safe_str_cmp(args['password'], args['password_confirmation']):
+        if not compare_digest(args['password'], args['password_confirmation']):
             return {
                 'success': False,
                 'errors': {
@@ -43,4 +43,3 @@ class Register(Resource):
             'success': True,
             'user': user_summary.dump(user).data
         }, 201
-

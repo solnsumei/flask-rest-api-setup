@@ -1,8 +1,6 @@
-import os
 from flask import Flask, Blueprint
 from flask_restful import Api
-from flask_jwt import JWT
-from src.utils.security import authenticate, identity
+from flask_jwt_extended import JWTManager
 from src.models.basemodel import db
 
 
@@ -30,8 +28,6 @@ def create_app():
 
     flask_app.register_blueprint(admin_bp, url_prefix="/api/v1/admin")
 
-    JWT(flask_app, authenticate, identity)  # /auth
-
     @flask_app.route('/')
     def index():
         return 'Welcome to Flask Rest API Setup!'
@@ -42,6 +38,7 @@ def create_app():
 
 
 app = create_app()
+jwt = JWTManager(app)
 
 
 if __name__ == "__main__":
