@@ -14,16 +14,18 @@ Initial scaffolding for a flask rest API development. Starter template for build
 
 This App was developed with the following stack:
 
-- Python
-- Flask
-- Flask-restful
-- Postgres DB
+- Python==3.12
+- Flask==3.10
+- Flask-restful==0.3.10
+- Flask-Script==2.0.6
+- Flask-SQLAlchemy==3.1.1
+- Postgres DB / SQlite
 - Gunicorn Web Server
 
 ## Requirements
-- Python 3.6+
+- Python 3.12+
 - Python pip
-- Postgres SQL
+- Postgres / SQlite
 
 ## Installation
 - fork this repository
@@ -31,9 +33,9 @@ This App was developed with the following stack:
 - setup your database 
 - on the terminal cd into the app folder 
 - run `pip install -r requirements.txt` to install required modules
-- run `python manage.py db init ` to setup alembic migrations
-- run `python manage.py db migrate -m='<your migration message>'` to create migration files
-- then run `python manage.py db upgrade` to create tables
+- run `flask --app manage db init ` to setup alembic migrations
+- run `flask --app manage db migrate -m='<your migration message>'` to create migration files
+- then run `flask --app python manage db upgrade` to create tables
 
 ## Running the App
 - on the terminal run `gunicorn main:app`
@@ -47,6 +49,14 @@ This App was developed with the following stack:
 - `src/middlewares` --- define your middleware files here
 - You can modify the app to suit your need.
 - Happy usage.
+
+## Update Information
+- Flask-JWT has been replaced with Flask-JWT-extended
+- Flask-Scripts and dependencies removed.
+- Future versions may use Pydantic instead of Marshmallow
+
+## Contributions
+- Contributors are needed to keep developing this template with updates to its dependencies. You can reach me on my email.
 
 ## Credits
 solnsumei@gmail.com

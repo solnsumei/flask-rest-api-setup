@@ -1,6 +1,10 @@
 venv/
 idea/
 .idea
+.venv
+.code
+vscode
+.vscode
 .env
 .DS_Store
 .__pycache__/
@@ -9,3 +13,4 @@ tests/__pycache__/
 .pytest_cache/
 migrations/
 **.db
+instance
