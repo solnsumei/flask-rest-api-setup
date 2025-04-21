@@ -6,7 +6,7 @@ from main import create_app
 
 app = create_app()
 
-
+## Making a new comment to modify a file.
 MODELS_DIRECTORY = "models"
 EXCLUDE_FILES = ["__init__.py"]
 
