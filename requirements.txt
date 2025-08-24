@@ -7,7 +7,7 @@ cffi==1.17.1
 click==8.1.8
 dnspython==2.7.0
 eventlet==0.39.0
-Flask==3.1.0
+Flask==3.1.1
 Flask-JWT-Extended==4.7.1
 Flask-Migrate==4.1.0
 Flask-RESTful==0.3.10
